@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <style>
+    html {
+      height: 100%;
+      font-family: 'Roboto', sans-serif;
+    }
+    body {
+      margin: 0;
+      height: 100%;
+    }
+    #app {
+      background-color: #ededed;
+      border-radius: 10px;
+      height: 100%;
+    }
+    #drag {
+      height: 30px;
+      background-color: #000;
+      -webkit-app-region: drag;
+      display: flex;
+      justify-content: flex-end;
+    }
+    #drag > * {
+      -webkit-app-region: no-drag;
+    }
+    #wrap {
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      height: calc(100% - 30px);
+      box-sizing: border-box;
+      justify-content: space-between;
+    }
+    #list {
+      margin-bottom: 30px;
+    }
+    .music-item {
+      padding: 10px 0;
+    }
+    #controls {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .player-progress-container {
+      position: relative;
+      width: 365px;
+      height: 9px;
+      margin: 0 auto;
+      background-color: #414141;
+      border-radius: 40px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .player-progress-value {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      background-color: #CDD2D8;
+      border-radius: 40px;
+    }
+    .player-progress-value:after {
+      position: absolute;
+      top: -3px;
+      right: -6px;
+      content: '';
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      background-color: #7748B5;
+      box-shadow: rgba(0, 0, 0, 0.2) 0 0 5px 2px;
+    }
+  </style>
+  <title>Trix</title>
+</head>
+<body>
+  <div id="app"></div>
+</body>
+</html>
